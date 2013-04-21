@@ -14,6 +14,7 @@ var promptCtrl = require('../controllers/prompt');
 var locationCtrl = require('../controllers/location');
 var seatCtrl = require('../controllers/seat');
 var introCtrl = require('../controllers/intro');
+var gossipCtrl = require('../controllers/gossip');
 
 module.exports = function (message, req, res, next) {
   var content = (message.Content || '').trim();
@@ -35,7 +36,7 @@ module.exports = function (message, req, res, next) {
   }
   // 查询新人八卦
   if (instructions.gossip.indexOf(content) >= 0) {
-
+    return gossipCtrl.handle(message, req, res);
   }
   // 默认显示帮助
   return promptCtrl.help(req, res);
