@@ -12,3 +12,13 @@ logs
 results
 
 npm-debug.log
+
+node_modules
+cov
+build
+public
+nohup.out
+.lock-wscript
+cdn.json
+coverage.html
+.DS_Store

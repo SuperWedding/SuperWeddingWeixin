@@ -1,0 +1,32 @@
+{
+  "name": "SuperWeddingWeixin",
+  "description": "a Weixin helper for wedding party",
+  "version": "0.0.1",
+  "keywords": ["wedding", "weixin"],
+  "author": "RockDai <rockdai@qq.com>",
+  "scripts": {
+    "start": "node dispatch.js",
+    "test": "make test"
+  },
+  "dependencies": {
+    "connect": "2.7.2",
+    "response-patch": "0.0.3",
+    "urlrouter": "0.3.0",
+    "easymysql": "0.2.7",
+    "wechat": "0.3.5",
+    "urllib": "0.3.4",
+    "logfilestream": "0.0.2",
+    "utility": "0.0.3",
+    "moment": "2.0.0"
+  },
+  "devDependencies": {
+    "should": "1.2.2",
+    "mocha": "1.8.1",
+    "supertest": "0.4.2",
+    "mm": "0.1.0",
+    "jscover": "0.2.1",
+    "pedding": "0.0.1"
+  },
+  "main": "dispatch.js",
+  "engines": { "node": ">= 0.8.0" }
+}
