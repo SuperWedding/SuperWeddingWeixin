@@ -41,10 +41,7 @@ if (config.debug) {
 }
 
 app.use(connect.bodyParser());
-app.use(urlrouter(routes));
-
-app.use('/portal', wechat(config.wechat.token)
-    .text(textHandler));
+app.use('/portal', wechat(config.wechat.token, textHandler));
 
 /**
  * Error handler
