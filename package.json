@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "connect": "2.7.2",
+    "connect-render": "0.2.1",
+    "response-send": "0.0.1",
     "response-patch": "0.0.3",
     "urlrouter": "0.3.0",
     "easymysql": "0.2.7",

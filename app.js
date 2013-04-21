@@ -10,9 +10,11 @@
 
 require('response-patch');
 var http = require('http');
+var path = require('path');
 var connect = require('connect');
 var urlrouter = require('urlrouter');
 var wechat = require('wechat');
+var render = require('connect-render');
 var config = require('./config');
 var routes = require('./routes');
 var textHandler = require('./handlers/text');
@@ -42,6 +44,17 @@ if (config.debug) {
 
 app.use(connect.bodyParser());
 app.use('/portal', wechat(config.wechat.token, wechat.text(textHandler)));
+app.use(render({
+  root: path.join(__dirname, '/views'),
+  layout: false,
+  viewExt: '.html',
+  cache: !config.debug,
+  helpers: { 
+    version: config.version,
+    config: config
+  }
+}));
+app.use(urlrouter(routes));
 
 /**
  * Error handler
