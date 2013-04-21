@@ -18,7 +18,7 @@ module.exports = function (message, req, res, next) {
   var content = (message.Content || '').trim();
   // 先检查是否是查座位
   if (content[0] === '@') {
-    return seatCtrl.handle(req, res);
+    return seatCtrl.handle(message, req, res);
   }
   // 查询酒店地址
   if (instructions.location.indexOf(content) >= 0) {

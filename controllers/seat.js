@@ -23,7 +23,7 @@ var seats = [
   }
 ];
 
-exports.handle = function (req, res) {
+exports.handle = function (message, req, res) {
   var content = (message.Content || '').trim();
   var name = (content.substring(1)).split(' ')[0];
   var found = [];
