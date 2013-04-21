@@ -18,7 +18,7 @@ var config = {
   debug: true,
   enableCluster: true,
   port: 9001,
-  serverHost: 'http://218.245.3.219:9001',
+  serverHost: 'http://wedding.keydiary.net',
   reportTo: 'RockDai <rockdai@qq.com>',
   warningTo: 'RockDai <rockdai@qq.com>',
   logdir: path.join(process.env.HOME, 'logs'),
@@ -36,7 +36,7 @@ var config = {
   },
   // 微信公众账号相关配置
   wechat: {
-    token: 's!E@c#r$E%t1'
+    token: 'SuperWedd1ng'
   }
 };
 
