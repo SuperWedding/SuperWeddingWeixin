@@ -23,5 +23,5 @@ module.exports = function (message, req, res, next) {
   if (instructions.seat.indexOf(content) >= 0) {
 
   }
-  return prompt.help(req, res);
+  return promptCtrl.help(req, res);
 };
