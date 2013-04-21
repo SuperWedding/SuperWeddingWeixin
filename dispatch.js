@@ -1,5 +1,5 @@
 /*!
- * SuperWedding - dispath.js, dispatch app workers.
+ * SuperWedding - dispatch.js, dispatch app workers.
  */
 
 "use strict";

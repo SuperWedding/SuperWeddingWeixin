@@ -18,5 +18,3 @@ exports.location = [
 ];
 
 exports.gossip = ['八卦'];
-
-exports.seat = ['座位', '席位'];
