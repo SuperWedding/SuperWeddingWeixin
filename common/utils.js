@@ -25,3 +25,19 @@ exports.flatten = function (input) {
   }
   return output;
 };
+
+exports.formatMembers = function (input) {
+  if (!input || !util.isArray(input)) {
+    return '';
+  }
+  var output = [];
+  for (var i = 0, l = input.length; i < l; i++) {
+    var value = input[i];
+    if (util.isArray(value)) {
+      output.push(value[0] + '(' + (value.slice(1) || []).join('/') + ')');
+    } else {
+      output.push(value);
+    }
+  }
+  return output.join('、');
+};
