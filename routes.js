@@ -15,4 +15,10 @@ module.exports = function (app) {
   app.get('/static/location', function (req, res, next) {
     return res.render('location');
   });
+  app.get('/static/bridegroom', function (req, res, next) {
+    return res.render('bridegroom');
+  });
+  app.get('/static/bride', function (req, res, next) {
+    return res.render('bride');
+  });
 };

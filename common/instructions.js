@@ -18,3 +18,7 @@ exports.location = [
 ];
 
 exports.gossip = ['八卦'];
+
+exports.bridegroom = ['新郎', '新郎官', '新浪'];
+
+exports.bride = ['新娘', '新娘子'];
