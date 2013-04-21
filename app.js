@@ -12,8 +12,10 @@ require('response-patch');
 var http = require('http');
 var connect = require('connect');
 var urlrouter = require('urlrouter');
+var wechat = require('wechat');
 var config = require('./config');
 var routes = require('./routes');
+var textHandler = require('./handlers/text');
 
 /**
  * Init App and Middlewares
@@ -40,6 +42,9 @@ if (config.debug) {
 
 app.use(connect.bodyParser());
 app.use(urlrouter(routes));
+
+app.use('/portal', wechat(config.wechat.token)
+    .text(textHandler));
 
 /**
  * Error handler
