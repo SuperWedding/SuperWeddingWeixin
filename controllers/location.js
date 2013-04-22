@@ -15,7 +15,7 @@ exports.handle = function (req, res) {
   res.reply([{
     title: '江干区钱潮路天元大厦',
     description: '点我查看更酒店详细地址和驾车路线',
-    picurl: config.serverHost + '/assets/img/location.png',
+    picurl: config.serverHost + '/assets/img/location.png?v=' + config.version,
     url: config.serverHost + '/static/location'
   }]);
 };

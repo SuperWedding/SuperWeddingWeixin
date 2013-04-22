@@ -16,7 +16,7 @@ exports.bridegroom = function (message, req, res) {
   res.reply([{
     title: '帅气的新郎：闻啸',
     description: '点我查看新郎介绍',
-    picurl: config.serverHost + '/assets/img/bridegroom.png',
+    picurl: config.serverHost + '/assets/img/bridegroom.png?v=' + config.version,
     url: config.serverHost + '/static/bridegroom'
   }]);
 };
@@ -26,7 +26,7 @@ exports.bride = function (message, req, res) {
   res.reply([{
     title: '漂亮的新娘：张茜',
     description: '点我查看新娘介绍',
-    picurl: config.serverHost + '/assets/img/bride.png',
+    picurl: config.serverHost + '/assets/img/bride.png?v=' + config.version,
     url: config.serverHost + '/static/bride'
   }]);
 };
