@@ -38,10 +38,10 @@ module.exports = function (message, req, res, next) {
   if (instructions.location.indexOf(content) >= 0) {
     return locationCtrl.handle(req, res);
   }
-  // 查询新人八卦
-  if (instructions.gossip.indexOf(content) >= 0) {
-    return gossipCtrl.handle(message, req, res);
-  }
+  // // 查询新人八卦
+  // if (instructions.gossip.indexOf(content) >= 0) {
+  //   return gossipCtrl.handle(message, req, res);
+  // }
   // 默认显示帮助
   return promptCtrl.help(req, res);
 };
