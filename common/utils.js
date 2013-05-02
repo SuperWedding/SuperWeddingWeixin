@@ -34,11 +34,12 @@ exports.formatMembers = function (input) {
   for (var i = 0, l = input.length; i < l; i++) {
     var value = input[i];
     if (util.isArray(value)) {
-      if (value.length === 1) {
-        output.push(value[0]);
-      } else {
-        output.push(value[0] + '(' + (value.slice(1) || []).join('/') + ')');
-      }
+      output.push(value[0] || '');
+      // if (value.length === 1) {
+      //   output.push(value[0]);
+      // } else {
+      //   output.push(value[0] + '(' + (value.slice(1) || []).join('/') + ')');
+      // }
     } else {
       output.push(value);
     }

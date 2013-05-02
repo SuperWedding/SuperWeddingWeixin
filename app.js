@@ -18,7 +18,6 @@ var render = require('connect-render');
 var config = require('./config');
 var routes = require('./routes');
 var textHandler = require('./handlers/text');
-var imageHandler = require('./handlers/image');
 
 /**
  * Init App and Middlewares
@@ -44,8 +43,7 @@ if (config.debug) {
 }
 
 app.use(connect.bodyParser());
-app.use('/portal', wechat(config.wechat.token,
-                    wechat.text(textHandler).image(imageHandler)));
+app.use('/portal', wechat(config.wechat.token, wechat.text(textHandler)));
 app.use(render({
   root: path.join(__dirname, '/views'),
   layout: false,
