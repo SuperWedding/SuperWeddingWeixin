@@ -21,4 +21,7 @@ module.exports = function (app) {
   app.get('/static/bride', function (req, res, next) {
     return res.render('bride');
   });
+  app.get('/static/photos', function (req, res, next) {
+    return res.render('photos');
+  });
 };

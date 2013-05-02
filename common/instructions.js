@@ -23,4 +23,4 @@ exports.bridegroom = ['新郎', '新郎官', '新浪'];
 
 exports.bride = ['新娘', '新娘子'];
 
-exports.photos = ['婚纱', '婚纱照', '结婚照'];
+exports.photos = ['婚纱', '婚纱照', '结婚照', '照片'];

@@ -30,6 +30,10 @@ module.exports = function (message, req, res, next) {
   if (instructions.bride.indexOf(content) >= 0) {
     return introCtrl.bride(message, req, res);
   }
+  // 婚纱照
+  if (instructions.photos.indexOf(content) >= 0) {
+    return introCtrl.photos(message, req, res);
+  }
   // 查询酒店地址
   if (instructions.location.indexOf(content) >= 0) {
     return locationCtrl.handle(req, res);

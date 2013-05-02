@@ -33,7 +33,7 @@ describe('common/utils.test.js', function () {
     });
     it('should format members array', function () {
       var input = [['贾超', '玄澄', '导演', '大叔'], ['戴汶倬', '巴思'], '谢霆锋'];
-      utils.formatMembers(input).should.eql('贾超(玄澄/导演/大叔)、戴汶倬(巴思)、谢霆锋');
+      utils.formatMembers(input).should.eql('贾超、戴汶倬、谢霆锋');
     });
   });
 });
