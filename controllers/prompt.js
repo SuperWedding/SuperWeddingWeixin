@@ -15,7 +15,7 @@ exports.help = function (req, res) {
   res.reply([{
     title: '欢迎参加闻啸张茜婚礼',
     description: '闻啸&张茜婚礼微信助手使用帮助',
-    picurl: config.serverHost + '/assets/img/welcome.jpg?v=' + config.version,
+    picurl: config.serverHost + '/assets/img/help.jpg?v=' + config.version,
     url: config.serverHost + '/static/help'
   }]);
 };
