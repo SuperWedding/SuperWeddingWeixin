@@ -24,7 +24,7 @@ exports.bridegroom = function (message, req, res) {
 // 新娘介绍
 exports.bride = function (message, req, res) {
   res.reply([{
-    title: '漂亮的新娘：张茜',
+    title: '美丽的新娘：张茜',
     description: '点我查看新娘介绍',
     picurl: config.serverHost + '/assets/img/bride.png?v=' + config.version,
     url: config.serverHost + '/static/bride'
@@ -60,4 +60,9 @@ exports.photos = function (message, req, res) {
     picurl: config.serverHost + picUrl,
     url: config.serverHost + '/static/photos'
   }]);
+};
+
+// 菜单
+exports.menu = function (message, req, res) {
+  res.reply('菜单将在3号晚间发布！敬请期待啊哈哈哈哈！');
 };

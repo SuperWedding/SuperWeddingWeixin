@@ -38,6 +38,10 @@ module.exports = function (message, req, res, next) {
   if (instructions.location.indexOf(content) >= 0) {
     return locationCtrl.handle(req, res);
   }
+  // 查询菜单
+  if (instructions.menu.indexOf(content) >= 0) {
+    return introCtrl.menu(message, req, res);
+  }
   // // 查询新人八卦
   // if (instructions.gossip.indexOf(content) >= 0) {
   //   return gossipCtrl.handle(message, req, res);
