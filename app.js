@@ -17,8 +17,7 @@ var wechat = require('wechat');
 var render = require('connect-render');
 var config = require('./config');
 var routes = require('./routes');
-var textHandler = require('./handlers/text');
-var promptCtrl = require('./controllers/prompt');
+var portal = require('./controllers/portal');
 
 /**
  * Init App and Middlewares
@@ -45,15 +44,10 @@ if (config.debug) {
 
 app.use(connect.bodyParser());
 app.use('/portal', wechat(config.wechat.token,
-                    wechat.text(textHandler).event(function (message, req, res) {
-                      if (message.Event === 'subscribe') {
-                        return promptCtrl.help(req, res);
-                      }
-                      if (message.Event === 'unsubscribe') {
-                        return res.reply('Bye!');
-                      }
-                      res.reply('尚未支持! Coming soon!');
-                    })));
+                    wechat
+                      .text(portal.text)
+                      .event(portal.event)
+                      .image(portal.image)));
 app.use(render({
   root: path.join(__dirname, '/views'),
   layout: false,
