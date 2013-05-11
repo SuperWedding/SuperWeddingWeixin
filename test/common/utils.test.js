@@ -13,6 +13,12 @@ var utils = require('../../common/utils');
 
 describe('common/utils.test.js', function () {
 
+  describe('getMemberName()', function () {
+    it('should @+「巴思」=> 巴思', function () {
+      utils.getMemberName('@+「巴思」').should.equal('巴思');
+    });
+  });
+
   describe('flatten()', function () {
     it('should have return when no input', function () {
       utils.flatten().length.should.eql(0);
@@ -24,6 +30,7 @@ describe('common/utils.test.js', function () {
       utils.flatten(['a', 'b', ['c', 'd', ['e', 'f', 'g']]]).should.eql(['a', 'b', 'c', 'd', 'e', 'f', 'g']);
     });
   });
+
   describe('formatMembers()', function () {
     it('should have return when no input', function () {
       utils.formatMembers().should.eql('');

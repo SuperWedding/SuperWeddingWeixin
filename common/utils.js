@@ -10,6 +10,17 @@
 
 var util = require('util');
 
+exports.getMemberName = function (input) {
+  if (!input) {
+    return '';
+  }
+  // 去掉@号
+  var name = (input.substring(1)).split(' ')[0] || '';
+  // 去掉+、「、」
+  name = name.replace(/(\+|「|」)/g, '');
+  return name;
+};
+
 exports.flatten = function (input) {
   if (!input || !util.isArray(input)) {
     return [];

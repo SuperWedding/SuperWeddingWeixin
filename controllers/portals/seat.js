@@ -15,7 +15,7 @@ var utils = require('../../common/utils');
 
 exports.handle = function (message, req, res) {
   var content = (message.Content || '').trim();
-  var name = (content.substring(1)).split(' ')[0];
+  var name = utils.getMemberName(content);
   var found = [];
   for (var i = 0, l = seatings.length; i < l; i++) {
     var members = utils.flatten(seatings[i].members);
