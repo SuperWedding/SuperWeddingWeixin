@@ -8,20 +8,12 @@
  * Module dependencies.
  */
 
+var staticsCtrl = require('./controllers/statics');
+
 module.exports = function (app) {
-  app.get('/static/help', function (req, res, next) {
-    return res.render('help');
-  });
-  app.get('/static/location', function (req, res, next) {
-    return res.render('location');
-  });
-  app.get('/static/bridegroom', function (req, res, next) {
-    return res.render('bridegroom');
-  });
-  app.get('/static/bride', function (req, res, next) {
-    return res.render('bride');
-  });
-  app.get('/static/photos', function (req, res, next) {
-    return res.render('photos');
-  });
+  app.get('/static/help', staticsCtrl.help);
+  app.get('/static/location', staticsCtrl.location);
+  app.get('/static/bridegroom', staticsCtrl.bridegroom);
+  app.get('/static/bride', staticsCtrl.bride);
+  app.get('/static/photos', staticsCtrl.photos);
 };
