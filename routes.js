@@ -7,6 +7,7 @@
 /**
  * Module dependencies.
  */
+var liveCtrl = require('./controllers/live.js');
 
 module.exports = function (app) {
   app.get('/static/help', function (req, res, next) {
@@ -24,4 +25,5 @@ module.exports = function (app) {
   app.get('/static/photos', function (req, res, next) {
     return res.render('photos');
   });
+  app.get('/live', liveCtrl.main);
 };

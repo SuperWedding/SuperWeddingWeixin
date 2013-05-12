@@ -19,6 +19,7 @@ var config = require('./config');
 var routes = require('./routes');
 var textHandler = require('./handlers/text');
 var promptCtrl = require('./controllers/prompt');
+var logger = require('./common/log');
 
 /**
  * Init App and Middlewares
