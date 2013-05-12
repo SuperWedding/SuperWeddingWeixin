@@ -17,6 +17,7 @@ var wechat = require('wechat');
 var render = require('connect-render');
 var config = require('./config');
 var routes = require('./routes');
+var logger = require('./common/log');
 var portal = require('./controllers/portal');
 
 /**

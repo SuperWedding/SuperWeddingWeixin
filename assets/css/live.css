@@ -1,0 +1,71 @@
+body {
+  background: url(/assets/img/live_bg.jpg) repeat;
+  font-family: "微软雅黑", "Microsoft YaHei", SimHei;
+  color: #666;
+  -webkit-background-size: repeat;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.flows {
+  width: 90%;
+  margin-top: 3%;
+  margin-left: 8%;
+  height: 94%;
+}
+
+.flows .avartar {
+  float: left;
+  overflow: hidden;
+  -webkit-transition: font 0.5s linear;
+  margin-top: 10px;
+
+}
+
+.flows .avartar span {
+
+}
+
+
+.flows .flow {
+  margin: 10px 0;
+  display: none;
+  word-break: break-all;
+  word-wrap: break-word; 
+}
+
+.flows .message {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  overflow: hidden;
+  float: right;
+}
+
+.flows .message span,
+.flows .avartar span {
+  padding: 0;
+  margin: 0;
+  -webkit-transition: font 0.5s linear;
+}
+
+.flows .message img {
+  width: 100%;
+}
+
+.flows .message .img-content {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cf {
+  clear: both;
+  display: block;
+}
