@@ -1,18 +1,10 @@
 /*!
- * SuperWedding - controllers/seat.js
+ * SuperWedding - config/seatings.js
  */
 
 "use strict";
 
-/**
- * Module dependencies.
- */
-
-var config = require('../config');
-var logger = require('../common/log');
-var utils = require('../common/utils');
-
-var seats = [
+module.exports = [
   {
     desc: '主婚桌',
     members: [['闻啸', '新郎', '宁朗'], ['张茜', '新娘', '小仙仙', 'Claire', '小可', '酱酱'], ['闻涛', '大公猪', 'kj她男人', '新郎他弟'], ['张怡', '张小台', '怡姐', '新娘她妹', '小姨子'], ['徐佳娜', '嘎娜'], ['王雁', 'ella'], ['钟涛'], ['祝骏'], ['朱寅翼', '院长'], ['董其峰及两位宾客', '董其峰', '董团长', '董老师']]
@@ -105,7 +97,7 @@ var seats = [
     desc: '第26桌',
     members: [['闻文龙'], ['黄玲儿'], ['钟玉昌'], ['闻文娟'], ['闻文虎'], ['施杏珠'], ['李向农'], ['胡琴梅'], ['闻一鸣'], ['包艳秋'], ['闻思诺']]
   },
- {
+  {
     desc: '第27桌',
     members: [['闻文英'], ['吕水清'], ['闻文彪'], ['许雪芬'], ['曹明'], ['国伟'], ['徐天标全家'], ['闻宝'], ['闻乐']]
   },
@@ -140,31 +132,5 @@ var seats = [
   {
     desc: '第36桌',
     members: [['连勇'], ['李伟'], ['崔文清'], ['陈道虎'], ['咸青元'], ['朱久余'], ['洪智雄'], ['俞伟琴']]
-  },
+  }
 ];
-
-exports.handle = function (message, req, res) {
-  var content = (message.Content || '').trim();
-  var name = (content.substring(1)).split(' ')[0];
-  var found = [];
-  for (var i = 0, l = seats.length; i < l; i++) {
-    var members = utils.flatten(seats[i].members);
-    if (members.indexOf(name) >= 0) {
-      found.push(seats[i]);
-    }
-  }
-  if (found.length === 0) {
-    res.reply('抱歉，没有找到「' + name + '」的座位，请确认输入是否正确。');
-    return;
-  }
-  if (found.length === 1) {
-    res.reply('「' + name + '」的座位在' + found[0].desc + '：' + utils.formatMembers(found[0].members) + '。');
-    return;
-  }
-  var text = [];
-  for (var i = 0, l = found.length; i < l; i++) {
-    text.push(found[i].desc + '：' + utils.formatMembers(found[i].members));
-  }
-  text = text.join('；');
-  res.reply('找到' + found.length + '位叫「' + name + '」的宾客。分别为' + text + '。');
-};
