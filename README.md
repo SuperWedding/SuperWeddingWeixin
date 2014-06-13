@@ -1,4 +1,4 @@
-SuperWeddingWeixin
+婚礼微信助手第一版
 ==================
 
-二师兄的世纪婚礼微信助手
+![扫一扫](http://rockdai.u.qiniudn.com/68437d38jw1e4aytnnw4rj20ge0jh0vy.jpg)
